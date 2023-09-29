@@ -13,7 +13,7 @@
 
 ## Supported template engines
 
-Some package has the same key name, consolidate will load them according to the order number. By example for dust, consolidate will try to use in this order: `dust`, `dustjs-helpers` and `dustjs-linkedin`. If `dust` is installed, `dustjs-linkedin` will not be used by consolidate.
+Some packages have the same key name. In this case, consolidate will load them according to the order number. For example, for a key name of dust, consolidate will try to order them in this manner: `dust`, `dustjs-helpers` and `dustjs-linkedin`. If `dust` is installed, `dustjs-linkedin` will not be used by consolidate.
 
 | Name `cons.*` | Package Name / Order | Website / State |
 | - | - | - |
@@ -63,13 +63,13 @@ Some package has the same key name, consolidate will load them according to the 
 | [walrus](https://github.com/jeremyruppel/walrus) | [`npm install walrus`](https://www.npmjs.com/package/walrus) | [(website)](http://documentup.com/jeremyruppel/walrus/) |
 | [whiskers](https://github.com/gsf/whiskers.js) | [`npm install whiskers`](https://www.npmjs.com/package/whiskers) | - | 
 
-__NOTE__: you must still install the engines you wish to use, add them to your package.json dependencies.
+__NOTE__: you must still install the engines you wish to use and add them to your package.json dependencies.
 
 ## API
 
   All templates supported by this library may be rendered using the signature `(path[, locals], callback)` as shown below, which happens to be the signature that Express supports so any of these engines may be used within Express.
 
-__NOTE__: All this example code uses cons.swig for the swig template engine. Replace swig with whatever templating you are using. For example, use cons.hogan for hogan.js, cons.jade for jade, etc. `console.log(cons)` for the full list of identifiers.
+__NOTE__: All these example codes use cons.swig for the swig template engine. Replace swig with whatever template you are using. For example, use cons.hogan for hogan.js, cons.jade for jade, etc. `console.log(cons)` for the full list of identifiers.
 
 ```js
 var cons = require('consolidate');
